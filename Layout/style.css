@@ -1,0 +1,111 @@
+body{
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+}
+.header{
+    background-color: aliceblue;
+    width: 100%;
+    height:10%;
+    text-align: center;
+}
+.left-nav{
+    width: 20%;
+    max-width: 20%;
+    background-color: bisque;
+    float: left;
+    height: 100%;
+}
+.body{
+    width: 60%;
+    max-width: 60%;
+    background-color: blanchedalmond;
+    float: left;
+    height: 100%;
+}
+.right-nav{
+    width: 20%;
+    max-width: 20%;
+    background-color: bisque;
+    float: left;
+    height: 100%;
+}
+.menu-container{
+    position: relative;
+}
+ul#nav-bar{
+    list-style-type: none;
+    height: 25px;
+    padding: 0px;
+    display: block;
+    background-color:cornflowerblue;
+}
+ul#nav-bar > li{
+    text-align: center;
+    float: left;
+    height: 25px;
+    line-height: 25px;
+    width: 125px;
+    border: 2px;
+    display: block;
+    cursor: pointer;
+}
+ul#nav-bar li,a{
+    list-style-type: none;
+    text-decoration: none;
+}
+ul#nav-bar ul {
+    padding: 0px;
+    margin: 0px;
+    background-color: cornflowerblue;
+}
+.content{
+    clear: both;
+}
+#nav-bar  .sub1,.sub2{
+    display: none;
+}
+#nav-bar  .sub1 > li{
+    position: relative;
+}
+#nav-bar li:hover > .sub1{
+    display: block;
+    background-color:cornflowerblue;
+}
+#nav-bar li:hover {
+    background-color:burlywood;
+}
+.sub1{
+    position: relative;
+}
+#nav-bar .sub1 > li:hover {
+    background-color: burlywood;
+} 
+.sub2{
+    position: absolute;
+    cursor: pointer;
+    width: 125px;
+    left: 125px;
+    top:0px;
+}
+#nav-bar .sub1 > li:hover > .sub2{
+    display: block;
+}
+#nav-bar .sub2 > li:hover{
+    background-color: burlywood;
+}
+.input-container {
+    position: relative;
+    background-color: burlywood;
+    width: 30%;
+}
+.tooltip{
+    display: none;
+}
+.input-container:hover > .tooltip{
+    position: absolute;
+    top:25px;
+    left: 50%;
+    width: 200px;
+    display: inline;
+}

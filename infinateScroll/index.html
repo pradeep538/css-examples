@@ -1,0 +1,56 @@
+<html>
+   <head>
+        <title>infinate scroll</title>
+        <link type="text/css" rel="stylesheet"/>
+   </head>
+   <body>
+       <style>
+        .page-home{
+            width: 400px;
+            height: 2000px;
+            background-color: grey;
+            border:black 20px dashed;
+            display: block;
+            position: relative;
+            margin: 0 auto;
+            border-top: white 20px dashed;
+            border-bottom: white 20px dashed;
+        }
+        #data{
+            position: fixed;
+            padding: 30px;
+        }
+        #car{
+            position: fixed;
+            top: 300px;
+            margin: 0 auto;
+            left:600px;
+            z-index: 300;
+        }
+        #container{
+            position: relative;
+        }
+        </style>
+        <div id="data">100/2000</div>
+        <div id="container">
+            <div class="page-home"></div>
+            <div id="car">
+                    <img src="car.png">
+            </div>
+            
+        </div>
+        
+        <script type="text/javascript">
+        window.onscroll = function(){
+            document.getElementById("data").innerHTML = window.pageYOffset+window.innerHeight+"/"+document.getElementById("container").offsetHeight;
+
+            console.log("sscroll:"+window.scrollY)
+            if(window.scrollY+window.innerHeight >= document.getElementById("container").offsetHeight-200){
+                var doc = document.createElement('div');
+                doc.className = "page-home";
+                document.getElementById("container").appendChild(doc);
+            }
+        }
+        </script>
+   </body>
+</html>
